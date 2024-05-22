@@ -14,6 +14,9 @@ import { useDarkMode } from "../../contexts/DarkModeContext";
 import { eachDayOfInterval, format, isSameDay, subDays } from "date-fns";
 const StyledSalesChart = styled(DashboardBox)`
   grid-column: 1 / -1;
+  @media screen and (max-width: 768px) {
+    grid-column: auto;
+  }
 
   /* Hack to change grid line colors */
   & .recharts-cartesian-grid-horizontal line,
@@ -90,6 +93,7 @@ function SalesChart({ bookings, numDays }) {
         background: "#fff",
       };
 
+  console.log(colors);
   return (
     <StyledSalesChart>
       <Heading as="h2">

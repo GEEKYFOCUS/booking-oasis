@@ -7,6 +7,7 @@ import {
   HiOutlineHomeModern,
   HiOutlineUser,
 } from "react-icons/hi2";
+import { useToggleBtn } from "../contexts/ToggleButton";
 
 const NavList = styled.ul`
   display: flex;
@@ -54,26 +55,27 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function MainNav() {
+  const { close } = useToggleBtn();
   return (
     <main>
       <NavList>
-        <StyledNavLink to="/dashboard">
+        <StyledNavLink to="/dashboard" onClick={close}>
           <HiOutlineHome />
           <span>Home</span>
         </StyledNavLink>
-        <StyledNavLink to="/bookings">
+        <StyledNavLink to="/bookings" onClick={close}>
           <HiOutlineCalendarDays />
           <span>Booking</span>
         </StyledNavLink>
-        <StyledNavLink to="/cabins">
+        <StyledNavLink to="/cabins" onClick={close}>
           <HiOutlineHomeModern />
           <span>Cabins</span>
         </StyledNavLink>
-        <StyledNavLink to="/users">
+        <StyledNavLink to="/users" onClick={close}>
           <HiOutlineUser />
           <span>Users</span>
         </StyledNavLink>
-        <StyledNavLink to="/settings">
+        <StyledNavLink to="/settings" onClick={close}>
           <HiOutlineCog6Tooth />
           <span>Settings</span>
         </StyledNavLink>

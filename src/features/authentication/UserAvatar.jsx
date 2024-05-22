@@ -20,6 +20,11 @@ const Avatar = styled.img`
   border-radius: 50%;
   outline: 2px solid var(--color-grey-100);
 `;
+const StyledSpan = styled.span`
+  @media screen and (max-width: 640px) {
+    font-size: 1.3rem;
+  }
+`;
 function UserAvatar() {
   const { user } = useUser();
   const { fullName, avatar } = user.user_metadata;
@@ -30,7 +35,7 @@ function UserAvatar() {
         src={avatar || "/img/default-user.jpg"}
         alt={`Avatar of ${fullName}`}
       />
-      <span>{fullName}</span>
+      <StyledSpan>{fullName}</StyledSpan>
     </StyledUserAvatar>
   );
 }

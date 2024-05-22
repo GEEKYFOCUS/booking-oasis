@@ -7,6 +7,9 @@ const Row = styled.div`
     css`
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-width: 640px) {
+        gap: 9rem;
+      }
     `}
 
   ${(props) =>

@@ -8,6 +8,9 @@ const StyledTable = styled.div`
   background-color: var(--color-grey-0);
   border-radius: 7px;
   overflow: hidden;
+  @media screen and (max-width: 640px) {
+    overflow: scroll;
+  }
 `;
 
 const CommonRow = styled.div`
@@ -27,6 +30,9 @@ const StyledHeader = styled(CommonRow)`
   letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--color-grey-600);
+  @media screen and (max-width: 640px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const StyledRow = styled(CommonRow)`

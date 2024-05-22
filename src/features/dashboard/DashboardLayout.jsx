@@ -12,6 +12,16 @@ const StyledDashboardLayout = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto 34rem auto;
   gap: 2.4rem;
+  @media screen and (max-width: 1024px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 0.85rem;
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+    /* grid-template-rows: auto; */
+  }
 `;
 function DashboardLayout() {
   const { bookings = {}, isLoading: isLoading1 } = useRecentBookings();
