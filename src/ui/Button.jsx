@@ -52,6 +52,11 @@ const Button = styled.button`
   border: none;
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
+  @media screen and(max-width: 640px) {
+    font-size: 0.2rem;
+    padding: 0.1rem 1rem;
+    font-weight: 200;
+  }
 
   ${(props) => sizes[props.size]}
   ${(props) => variations[props.variation]}

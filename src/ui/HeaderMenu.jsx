@@ -7,6 +7,9 @@ import DarkModeToggle from "./DarkModeToggle";
 const StyledHeaderMenu = styled.ul`
   display: flex;
   gap: 0.4rem;
+  @media screen and (max-width: 640px) {
+    font-size: 1rem;
+  }
 `;
 
 function HeaderMenu() {

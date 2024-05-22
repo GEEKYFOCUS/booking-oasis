@@ -13,6 +13,11 @@ const StyledFilter = styled.div`
 const FilterButton = styled.button`
   background-color: var(--color-grey-0);
   border: none;
+  @media screen and (max-width: 640px) {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.33rem 0.4rem;
+  }
 
   ${(props) =>
     props.active &&
